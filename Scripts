@@ -1,0 +1,10 @@
+//merges files together named splitweets and adds ", and a
+//newline outputs into sumtxt
+for file in $(ls -l|grep -i splitweets); do cat $file && echo \",\"; done > sumtext.txt
+
+
+//splits file into files 280 byte sized
+split -b 280 -a 4
+
+//removes all excess whitespaces from a text file
+tr -d '\n' < tweetlist.txt > nospacesscript.txt
